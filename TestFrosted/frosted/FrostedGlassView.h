@@ -36,5 +36,6 @@
 -(void)pause;
 -(void)unpause;
 -(void)update;
+-(void)clear;
 
 @end

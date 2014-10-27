@@ -111,10 +111,17 @@ void logTtoT2(struct timeval *t,struct timeval *t2) {
 }
 -(void)dealloc {
     // cleanup timer and restore scroll view delegates
-    [_fps invalidate];
+    NSLog(@"frost dealloc");
     for (int i=0;i<[_scrollViews count];i++) {
         ((UIScrollView*)[_scrollViews objectAtIndex:i]).delegate = [_scrollViewDelegates objectAtIndex:i];
     }
+}
+
+-(void)clear
+{
+    [_fps invalidate];
+    _glView.delegate = nil;
+    [_glView removeFromSuperview];
 }
 
 #pragma mark - the main render function
