@@ -18,6 +18,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+//    
+//    UIScrollView *scroll = [[UIScrollView alloc] initWithFrame:self.view.frame];
+//    scroll.contentSize = CGSizeMake(640, 1136);
+//    [self.view addSubview:scroll];
+//    scroll.backgroundColor = [[UIColor greenColor] colorWithAlphaComponent:0.3];
+//    
     
     UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 568)];
     img.image = [UIImage imageNamed:@"1.jpg"];
@@ -44,7 +50,7 @@
     _frostedGlass = [[FrostedGlassView alloc] initWithFrame:CGRectMake(0, 100, 320, 100)];
     _frostedGlass.blurRadius = 0.0;
     _frostedGlass.lightColor = [UIColor whiteColor];
-    _frostedGlass.lightStrength = 0.5;
+    _frostedGlass.lightStrength = 0.6;
     [_frostedGlass pause];
     [self.view addSubview:_frostedGlass];
     }
